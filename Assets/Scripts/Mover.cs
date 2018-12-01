@@ -17,7 +17,6 @@ public class Mover : MonoBehaviour {
 
     private float timeOut = 0.0f;
 
-    private bool wiggling = false;
     private float wiggleAngle = 0;
     private float wiggleSign = -1;
 
@@ -64,9 +63,9 @@ public class Mover : MonoBehaviour {
             );
         }
 
-        wiggling = Input.GetAxisRaw("Fire1") != 0;
+        weapon.GetComponent<MeleeWeapon>().wiggling = Input.GetAxisRaw("Fire1") != 0;
 
-        if (wiggling && !audioSource.isPlaying) {
+        if (weapon.GetComponent<MeleeWeapon>().wiggling && !audioSource.isPlaying) {
             audioSource.PlayOneShot(weapon.GetComponent<MeleeWeapon>().soundEffect);
         }
 
@@ -76,7 +75,7 @@ public class Mover : MonoBehaviour {
 
         float angle = Mathf.Atan2(direction.y, direction.x) * (180 / Mathf.PI) - 90;
 
-        if (wiggling)
+        if (weapon.GetComponent<MeleeWeapon>().wiggling)
         {
             if (wiggleAngle > 20 || wiggleAngle < -20)
                 wiggleSign = -wiggleSign;

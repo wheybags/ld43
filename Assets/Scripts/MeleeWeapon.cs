@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MeleeWeapon : MonoBehaviour {
 
-    public float Damage;
     public AudioClip soundEffect;
+    public int Damage;
+    public bool wiggling;
 
 	// Use this for initialization
 	void Start () {
@@ -16,4 +17,12 @@ public class MeleeWeapon : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (wiggling && collision.gameObject.tag == "Monster")
+        {
+            collision.gameObject.GetComponent<Monster>().TakeDamage(Damage);
+        }
+    }
 }
