@@ -25,7 +25,7 @@ public class Mover : MonoBehaviour {
     {
         weapon = Instantiate(newWeapon);
         weapon.transform.parent = transform;
-        weapon.transform.position = new Vector2(0, weapon.GetComponent<BoxCollider2D>().bounds.max.y);
+        weapon.transform.position = new Vector2(0, 0);
     }
 
     void FixedUpdate()
@@ -43,6 +43,9 @@ public class Mover : MonoBehaviour {
         Vector2 position = transform.position;
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePosition - position).normalized;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * (180 / Mathf.PI) - 90;
+        weapon.transform.rotation = Quaternion.Euler(0, 0, angle);
 
         Debug.DrawLine(position, position + direction * 2, Color.red, 0, false);
     }
