@@ -16,6 +16,10 @@ public class Mover : MonoBehaviour {
 
     private float timeOut = 0.0f;
 
+    private bool wiggling = false;
+    private float wiggleAngle = 0;
+    private float wiggleSign = -1;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -56,11 +60,28 @@ public class Mover : MonoBehaviour {
             );
         }
 
+        wiggling = Input.GetAxisRaw("Fire1") != 0;
+
         Vector2 position = transform.position;
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePosition - position).normalized;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * (180 / Mathf.PI) - 90;
+
+        if (wiggling)
+        {
+            if (wiggleAngle > 20 || wiggleAngle < -20)
+                wiggleSign = -wiggleSign;
+
+            wiggleAngle += 7 * wiggleSign;
+
+            angle += wiggleAngle;
+        }
+        else
+        {
+            wiggleAngle = 0;
+        }
+
         weapon.transform.rotation = Quaternion.Euler(0, 0, angle);
 
         Debug.DrawLine(position, position + direction * 2, Color.red, 0, false);
