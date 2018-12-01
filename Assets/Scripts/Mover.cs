@@ -10,6 +10,7 @@ public class Mover : MonoBehaviour {
 
     private new Rigidbody2D rigidbody;
     private Handicap handicap;
+    private AudioSource audioSource;
 
     private int maxHealth = 100;
     private int health;
@@ -20,12 +21,15 @@ public class Mover : MonoBehaviour {
     private float wiggleAngle = 0;
     private float wiggleSign = -1;
 
+    public AudioClip eatingSound;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         handicap = GetComponent<Handicap>();
+        audioSource = GetComponent<AudioSource>();
 
         health = maxHealth;
 
@@ -62,6 +66,10 @@ public class Mover : MonoBehaviour {
 
         wiggling = Input.GetAxisRaw("Fire1") != 0;
 
+        if (wiggling && !audioSource.isPlaying) {
+            audioSource.PlayOneShot(weapon.GetComponent<MeleeWeapon>().soundEffect);
+        }
+
         Vector2 position = transform.position;
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePosition - position).normalized;
@@ -90,6 +98,7 @@ public class Mover : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col) {
         if (col.gameObject.tag == "Food") {
             col.gameObject.SetActive(false);
+            audioSource.PlayOneShot(eatingSound);
             health += 10;
             if (health > maxHealth) {
                 health = maxHealth;

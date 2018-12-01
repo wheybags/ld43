@@ -5,6 +5,7 @@ using UnityEngine;
 public class MeleeWeapon : MonoBehaviour {
 
     public float Damage;
+    public AudioClip soundEffect;
 
 	// Use this for initialization
 	void Start () {
