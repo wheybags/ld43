@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4908591690856550}
   - component: {fileID: 61056989359078508}
+  - component: {fileID: 114152731946330764}
   m_Layer: 8
   m_Name: stick
   m_TagString: Untagged
@@ -96,6 +97,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.58, y: 3.82}
   m_EdgeRadius: 0
+--- !u!114 &114152731946330764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1885127404135888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a922bd762e44084fa0d41ca9ec54dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 0
+  soundEffect: {fileID: 8300000, guid: c21edaa77e34546ec9c364161ea4f1f8, type: 3}
 --- !u!114 &114554837228441924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
+  soundEffect: {fileID: 0}
 --- !u!212 &212937073097644156
 SpriteRenderer:
   m_ObjectHideFlags: 1
