@@ -19,9 +19,9 @@ public class Handicap : MonoBehaviour {
 
     void Update () {
         blindnessL.rectTransform.position = transform.position + blindnessLDelta;
-        blindnessR.rectTransform.position = transform.position + blindnessLDelta;
+        blindnessR.rectTransform.position = transform.position + blindnessRDelta;
 
         blindnessL.enabled = !leftEye;
         blindnessR.enabled = !rightEye;
-	}
+    }
 }
