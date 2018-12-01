@@ -94,7 +94,7 @@ public class Mover : MonoBehaviour {
         Debug.DrawLine(position, position + direction * 2, Color.red, 0, false);
     }
 
-    void OnCollisionEnter2D(Collision2D col) {
+    void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "Food") {
             col.gameObject.SetActive(false);
             audioSource.PlayOneShot(eatingSound);

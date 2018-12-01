@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Monster : MonoBehaviour {
-
     public int Hearts;
     public int hurtingTicks = 0;
 
     private SpriteRenderer spriteRenderer;
 
-    // Use this for initialization
     void Start () {
         spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
+
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
     }
     
     void FixedUpdate ()
@@ -35,6 +35,9 @@ public class Monster : MonoBehaviour {
             spriteRenderer.enabled = true;
             spriteRenderer.color = Color.white;
         }
+
+        var targetPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        GetComponent<Rigidbody2D>().velocity = (targetPosition - transform.position).normalized * 20.0f;
     }
 
     public void TakeDamage(int damage)
@@ -50,5 +53,12 @@ public class Monster : MonoBehaviour {
 
         hurtingTicks = 50;
         spriteRenderer.color = Color.red;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player") {
+            collision.gameObject.GetComponent<Health>().current -= 1;
+        }
     }
 }
