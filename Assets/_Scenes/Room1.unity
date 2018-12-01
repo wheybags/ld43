@@ -434,6 +434,7 @@ Transform:
   m_Children:
   - {fileID: 647416641}
   - {fileID: 1618098907}
+  - {fileID: 1640915833}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -737,6 +738,35 @@ Transform:
   m_Father: {fileID: 632377465}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1640915832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1640915833}
+  m_Layer: 0
+  m_Name: Entrances
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1640915833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1640915832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1930627247}
+  m_Father: {fileID: 632377465}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1808805110
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1808805113}
   - component: {fileID: 1808805112}
-  - component: {fileID: 1808805111}
+  - component: {fileID: 1808805114}
   m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
@@ -754,19 +784,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1808805111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1808805110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df34ed1b95364f8cb586603d17902ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: Room2
-  DoorName: Left
 --- !u!61 &1808805112
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -805,6 +822,20 @@ Transform:
   m_Father: {fileID: 1618098907}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1808805114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1808805110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742c0a85e75e4d54b838cbc81c4ddc68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitioningGameObject: {fileID: 770696223}
+  NewSceneName: Room2
+  TransitionDestinationTag: 0
 --- !u!1 &1831794353
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +890,48 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.5}
   m_EdgeRadius: 0
+--- !u!1 &1930627246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930627247}
+  - component: {fileID: 1930627248}
+  m_Layer: 0
+  m_Name: Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1930627247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1930627246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.8, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1640915833}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1930627248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1930627246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64124d5114c47d5ade47dc77eeee65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestinationTag: 1
+  TransitioningGameObject: {fileID: 770696223}
 --- !u!1 &2013529694
 GameObject:
   m_ObjectHideFlags: 0
