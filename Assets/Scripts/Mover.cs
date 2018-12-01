@@ -66,13 +66,8 @@ public class Mover : MonoBehaviour {
 
         wiggling = Input.GetAxisRaw("Fire1") != 0;
 
-        if (wiggling) {
-            if (!audioSource.isPlaying) {
-                audioSource.PlayOneShot(weapon.GetComponent<MeleeWeapon>().soundEffect);
-            }
-        }
-        else {
-            audioSource.Stop();
+        if (wiggling && !audioSource.isPlaying) {
+            audioSource.PlayOneShot(weapon.GetComponent<MeleeWeapon>().soundEffect);
         }
 
         Vector2 position = transform.position;
