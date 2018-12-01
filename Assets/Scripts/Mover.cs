@@ -9,11 +9,14 @@ public class Mover : MonoBehaviour {
     public GameObject defaultWeapon;
 
     private new Rigidbody2D rigidbody;
+    private Handicap handicap;
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        handicap = GetComponent<Handicap>();
 
         SetWeapon(defaultWeapon);
     }
@@ -27,9 +30,14 @@ public class Mover : MonoBehaviour {
 
     void FixedUpdate()
     {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        float actualSpeed = handicap.legs ? speed : speed / 12.0f;
+
         rigidbody.velocity = new Vector2(
-            Mathf.Lerp(0, Input.GetAxis("Horizontal") * speed, 0.8f),
-            Mathf.Lerp(0, Input.GetAxis("Vertical")   * speed, 0.8f)
+            Mathf.Lerp(0, Input.GetAxis("Horizontal") * actualSpeed, 0.8f),
+            Mathf.Lerp(0, Input.GetAxis("Vertical")   * actualSpeed, 0.8f)
         );
 
         Vector2 position = transform.position;
