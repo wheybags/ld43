@@ -123,8 +123,9 @@ GameObject:
   - component: {fileID: 185403400}
   - component: {fileID: 185403399}
   - component: {fileID: 185403398}
-  - component: {fileID: 185403397}
   - component: {fileID: 185403396}
+  - component: {fileID: 185403397}
+  - component: {fileID: 185403401}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -143,10 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315f33400852948d1a79221d09a8395d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blindnessL: {fileID: 1230976477}
-  blindnessR: {fileID: 1377279126}
   leftEye: 1
   rightEye: 1
+  legs: 1
 --- !u!114 &185403397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +221,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &185403401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185403395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5dd9018751b456eae7117cdf2622c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blindnessL: {fileID: 1230976477}
+  blindnessR: {fileID: 1377279126}
 --- !u!1 &224141133
 GameObject:
   m_ObjectHideFlags: 0
