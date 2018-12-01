@@ -145,8 +145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -78}
-  m_SizeDelta: {x: 1372.8, y: 1372.8}
+  m_AnchoredPosition: {x: 75.03998, y: -53.04001}
+  m_SizeDelta: {x: 659.6, y: 659.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &92347672
 MonoBehaviour:
@@ -318,7 +318,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.124
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -483,7 +483,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &260441844
 GameObject:
@@ -517,8 +517,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 413.40002, y: -78}
-  m_SizeDelta: {x: 1372.8, y: 1372.8}
+  m_AnchoredPosition: {x: 225.62, y: -53.04001}
+  m_SizeDelta: {x: 659.6, y: 659.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &260441846
 MonoBehaviour:
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 405576714}
   - component: {fileID: 405576713}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: BlindenessCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -738,7 +738,7 @@ RectTransform:
   - {fileID: 1377279125}
   - {fileID: 1230976476}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1130,8 +1130,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 204.5, y: -78}
-  m_SizeDelta: {x: 1372.8, y: 1372.8}
+  m_AnchoredPosition: {x: 125.25, y: -53.04001}
+  m_SizeDelta: {x: 659.6, y: 659.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &679616049
 MonoBehaviour:
@@ -1274,8 +1274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 309, y: -78}
-  m_SizeDelta: {x: 1372.8, y: 1372.8}
+  m_AnchoredPosition: {x: 175.46002, y: -53.04001}
+  m_SizeDelta: {x: 659.6, y: 659.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &841083434
 MonoBehaviour:
@@ -1648,7 +1648,7 @@ GameObject:
   - component: {fileID: 1668440204}
   - component: {fileID: 1668440203}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1727,7 +1727,7 @@ RectTransform:
   - {fileID: 260441845}
   - {fileID: 2024448130}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1985,8 +1985,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 517.89996, y: -78}
-  m_SizeDelta: {x: 1372.8, y: 1372.8}
+  m_AnchoredPosition: {x: 275.83, y: -53.04001}
+  m_SizeDelta: {x: 659.6, y: 659.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024448131
 MonoBehaviour:
@@ -2149,3 +2149,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hearts: 10
+  hurtingTicks: 0

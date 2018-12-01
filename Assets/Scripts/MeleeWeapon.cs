@@ -5,6 +5,7 @@ using UnityEngine;
 public class MeleeWeapon : MonoBehaviour {
 
     public AudioClip soundEffect;
+    public AudioClip hitEffect;
     public int Damage;
     public bool wiggling;
 
@@ -22,6 +23,7 @@ public class MeleeWeapon : MonoBehaviour {
     {
         if (wiggling && collision.gameObject.tag == "Monster")
         {
+            GetComponent<AudioSource>().PlayOneShot(hitEffect);
             collision.gameObject.GetComponent<Monster>().TakeDamage(Damage);
         }
     }
