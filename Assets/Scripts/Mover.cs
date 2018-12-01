@@ -12,5 +12,11 @@ public class Mover : MonoBehaviour {
         var force = new Vector2(horizontal, vertical);
 
         GetComponent<Rigidbody2D>().AddForce(force * speed);
+
+        Vector2 position = transform.position;
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePosition - position).normalized;
+
+        Debug.DrawLine(position, position + direction * 2, Color.red, 0, false);
     }
 }
