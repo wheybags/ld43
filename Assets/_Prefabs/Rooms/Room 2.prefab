@@ -51,7 +51,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4554034850745966}
-  - component: {fileID: 114449720624546652}
   m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
@@ -68,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4954732477659606}
   - component: {fileID: 61291250184236962}
-  - component: {fileID: 114258643007254020}
+  - component: {fileID: 114548999224534238}
   m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
@@ -653,7 +652,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4482205, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114258643007254020
+--- !u!114 &114548999224534238
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -661,25 +660,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1302730620685620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 742c0a85e75e4d54b838cbc81c4ddc68, type: 3}
+  m_Script: {fileID: 11500000, guid: d4498790ca174b759393ea8361e2f9d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewSceneName: Room2
-  Type: 0
-  TransitionDestinationTag: 0
   Destination: {fileID: 0}
---- !u!114 &114449720624546652
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1291337854831662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a64124d5114c47d5ade47dc77eeee65d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestinationTag: 0
 --- !u!212 &212997191085598490
 SpriteRenderer:
   m_ObjectHideFlags: 1

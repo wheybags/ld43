@@ -50,16 +50,16 @@ namespace SceneTransition
             DontDestroyOnLoad(gameObject);
         }
 
-        public static void TransitionToScene(TransitionPoint transitionPoint)
+        public static void TransitionToScene(SceneTransitionPoint sceneTransitionPoint)
         {
-            Instance.StartCoroutine(Instance.Transition(transitionPoint));
+            Instance.StartCoroutine(Instance.Transition(sceneTransitionPoint));
         }
 
-        protected IEnumerator Transition(TransitionPoint transitionPoint)
+        protected IEnumerator Transition(SceneTransitionPoint sceneTransitionPoint)
         {
             Scene currentScene = SceneManager.GetActiveScene();
 
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(transitionPoint.NewSceneName, LoadSceneMode.Additive);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneTransitionPoint.NewSceneName, LoadSceneMode.Additive);
             while (!asyncLoad.isDone)
             {
                 Debug.Log("Loading scene " + " [][] Progress: " + asyncLoad.progress);
@@ -67,8 +67,8 @@ namespace SceneTransition
             }
 
             GameObject player = GameObject.Find("Player");
-            SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByName(transitionPoint.NewSceneName));
-            Transform entranceLocation = GetDestination(transitionPoint.TransitionDestinationTag).transform;
+            SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByName(sceneTransitionPoint.NewSceneName));
+            Transform entranceLocation = GetDestination(sceneTransitionPoint.TransitionDestinationTag).transform;
             Transform enteringTransform = player.transform;
             enteringTransform.position = entranceLocation.position;
             enteringTransform.rotation = entranceLocation.rotation;
@@ -78,9 +78,9 @@ namespace SceneTransition
 //                entrance.OnReachDestination.Invoke();
         }
 
-        protected TransitionDestination GetDestination(DestinationTag destinationTag)
+        protected SceneTransitionDestination GetDestination(DestinationTag destinationTag)
         {
-            TransitionDestination[] entrances = FindObjectsOfType<TransitionDestination>();
+            SceneTransitionDestination[] entrances = FindObjectsOfType<SceneTransitionDestination>();
             for (int i = 0; i < entrances.Length; i++)
             {
                 if (entrances[i].DestinationTag == destinationTag)

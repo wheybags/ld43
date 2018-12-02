@@ -15,7 +15,7 @@ public enum DestinationTag
     G,
 }
 
-public class TransitionDestination : MonoBehaviour
+public class SceneTransitionDestination : MonoBehaviour
 {
     public DestinationTag DestinationTag;
 
