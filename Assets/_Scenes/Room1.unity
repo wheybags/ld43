@@ -1265,7 +1265,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 632377460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0099999, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6909, y: 1.6909, z: 1.6909}
   m_Children:
   - {fileID: 647416641}
@@ -2061,9 +2061,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742c0a85e75e4d54b838cbc81c4ddc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitioningGameObject: {fileID: 185403395}
   NewSceneName: Room2
+  Type: 0
   TransitionDestinationTag: 0
+  Destination: {fileID: 0}
 --- !u!1 &1831794353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,7 +2160,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestinationTag: 1
-  TransitioningGameObject: {fileID: 185403395}
 --- !u!1 &2013529694
 GameObject:
   m_ObjectHideFlags: 0
