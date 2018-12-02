@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour {
     public List<int> KeyIds = new List<int>();
-    public GameObject KeySprite;
+    public Image KeyImage;
     
     
 	void Update () {
-        KeySprite.SetActive(KeyIds.Count >= 1);
+        KeyImage.enabled = KeyIds.Count >= 1;
     }
 }
