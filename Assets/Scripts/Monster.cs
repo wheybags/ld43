@@ -19,8 +19,13 @@ public class Monster : MonoBehaviour {
 
         Debug.DrawLine(myPosition, targetPosition, Color.green);
 
-
-        GetComponent<Rigidbody2D>().velocity = (targetPosition - myPosition).normalized * 1.0f;
+        Vector3 screenPoint = Camera.main.WorldToViewportPoint(myPosition);
+        
+        if (screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1) {
+            GetComponent<Rigidbody2D>().velocity = (targetPosition - myPosition).normalized * 1.0f;
+        } else {
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
