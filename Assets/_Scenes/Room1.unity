@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftEye: 1
   rightEye: 1
-  legs: 1
+  legs: 2
   teeth: 1
 --- !u!114 &185403397
 MonoBehaviour:
