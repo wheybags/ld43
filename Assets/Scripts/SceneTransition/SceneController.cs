@@ -52,19 +52,28 @@ namespace SceneTransition
 
         public static void TransitionToScene(TransitionPoint transitionPoint)
         {
-            Instance.StartCoroutine(Instance.Transition(transitionPoint.NewSceneName, transitionPoint.TransitionDestinationTag));
+            Instance.StartCoroutine(Instance.Transition(transitionPoint));
         }
 
-        public static TransitionDestination GetDestinationFromTag(DestinationTag destinationTag)
+        protected IEnumerator Transition(TransitionPoint transitionPoint)
         {
-            return Instance.GetDestination(destinationTag);
-        }
+            Scene currentScene = SceneManager.GetActiveScene();
 
-        protected IEnumerator Transition(string newSceneName, DestinationTag destinationTag)
-        {
-            yield return SceneManager.LoadSceneAsync(newSceneName);
-            TransitionDestination entrance = GetDestination(destinationTag);
-            SetEnteringGameObjectLocation(entrance);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(transitionPoint.NewSceneName, LoadSceneMode.Additive);
+            while (!asyncLoad.isDone)
+            {
+                Debug.Log("Loading scene " + " [][] Progress: " + asyncLoad.progress);
+                yield return null;
+            }
+
+            GameObject player = GameObject.Find("Player");
+            SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByName(transitionPoint.NewSceneName));
+            Transform entranceLocation = GetDestination(transitionPoint.TransitionDestinationTag).transform;
+            Transform enteringTransform = player.transform;
+            enteringTransform.position = entranceLocation.position;
+            enteringTransform.rotation = entranceLocation.rotation;
+            SceneManager.UnloadSceneAsync(currentScene);
+            
 //            if(entrance != null)
 //                entrance.OnReachDestination.Invoke();
         }
@@ -80,20 +89,6 @@ namespace SceneTransition
 
             Debug.LogWarning("No entrance was found with the " + destinationTag + " tag.");
             return null;
-        }
-
-        protected void SetEnteringGameObjectLocation(TransitionDestination entrance)
-        {
-            if (entrance == null)
-            {
-                Debug.LogWarning("Entering Transform's location has not been set.");
-                return;
-            }
-
-            Transform entranceLocation = entrance.transform;
-            Transform enteringTransform = entrance.TransitioningGameObject.transform;
-            enteringTransform.position = entranceLocation.position;
-            enteringTransform.rotation = entranceLocation.rotation;
         }
     }
 }
