@@ -191,7 +191,6 @@ GameObject:
   m_Component:
   - component: {fileID: 185403400}
   - component: {fileID: 185403399}
-  - component: {fileID: 185403398}
   - component: {fileID: 185403396}
   - component: {fileID: 185403405}
   - component: {fileID: 185403397}
@@ -200,6 +199,7 @@ GameObject:
   - component: {fileID: 185403403}
   - component: {fileID: 185403404}
   - component: {fileID: 185403406}
+  - component: {fileID: 185403398}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -239,8 +239,8 @@ MonoBehaviour:
   defaultWeapon: {fileID: 1885127404135888, guid: 19460de3b37647a43a3d926d1093b5a0,
     type: 2}
   eatingSound: {fileID: 8300000, guid: 835ac66112b374ad0b5e8f6d2210fb5f, type: 3}
---- !u!61 &185403398
-BoxCollider2D:
+--- !u!70 &185403398
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -251,19 +251,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.38}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.63, y: 0.97}
-    newSize: {x: 0.63, y: 0.97}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.65, y: 0.2}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
 --- !u!50 &185403399
 Rigidbody2D:
   serializedVersion: 4

@@ -12,7 +12,7 @@ public class Monster : MonoBehaviour {
     {
         var player = GameObject.FindGameObjectWithTag("Player");
 
-        Vector2 targetPosition = player.GetComponent<BoxCollider2D>().bounds.center;
+        Vector2 targetPosition = player.GetComponent<Collider2D>().bounds.center;
 
 
         Vector2 myPosition = transform.position;
