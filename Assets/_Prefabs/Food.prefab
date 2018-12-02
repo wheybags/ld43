@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58455273645170844}
   m_Layer: 0
   m_Name: Food
-  m_TagString: Food
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,8 +35,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1933494063074892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.35, y: 1.352, z: 0}
-  m_LocalScale: {x: 0.1919, y: 0.1919, z: 0.1919}
+  m_LocalPosition: {x: 0.977, y: 0.989, z: 0}
+  m_LocalScale: {x: 0.2222499, y: 0.25337997, z: 0.09652571}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
