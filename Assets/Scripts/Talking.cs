@@ -19,10 +19,10 @@ public class Talking : MonoBehaviour {
         text = canvas.transform.Find("Text").gameObject.GetComponent<Text>();
         button = canvas.transform.Find("Button").gameObject.GetComponent<Button>();
 
-        button.onClick.AddListener(UpdateDialog);
+        button.onClick.AddListener(() => UpdateDialog(true));
     }
 
-    private void UpdateDialog() {
+    private void UpdateDialog(bool advance) {
         switch (dialog) {
             case 0:
                 text.text = "Hello, my good man! Would you be interested in a business proposal? I can greatly enhance your abilities, but I need a small favour in return...";
@@ -39,7 +39,8 @@ public class Talking : MonoBehaviour {
                 canvas.enabled = false;
                 break;
         }
-        dialog++;
+        if (advance)
+            dialog++;
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -47,7 +48,7 @@ public class Talking : MonoBehaviour {
             playerHandicap = collision.collider.GetComponent<Handicap>();
             playerHealth = collision.collider.GetComponent<Health>();
             canvas.enabled = true;
-            UpdateDialog();
+            UpdateDialog(false);
         }
     }
 }
