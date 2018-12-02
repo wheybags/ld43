@@ -4,9 +4,6 @@ using SceneTransition;
 [RequireComponent(typeof(Collider2D))]
 public class TransitionPoint : MonoBehaviour
 {
-    [Tooltip("This is the gameobject that will transition.  For example, the player.")]
-    public GameObject TransitioningGameObject;
-
     [SceneName]
     public string NewSceneName;
 
@@ -15,7 +12,7 @@ public class TransitionPoint : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == TransitioningGameObject)
+        if (other.gameObject.CompareTag("Player"))
         {
             SceneController.TransitionToScene(this);
         }

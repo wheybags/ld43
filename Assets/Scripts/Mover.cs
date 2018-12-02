@@ -11,9 +11,7 @@ public class Mover : MonoBehaviour {
     private new Rigidbody2D rigidbody;
     private Handicap handicap;
     private AudioSource audioSource;
-
-    private int maxHealth = 100;
-    private int health;
+    private Health health;
 
     private float timeOut = 0.0f;
 
@@ -29,8 +27,7 @@ public class Mover : MonoBehaviour {
 
         handicap = GetComponent<Handicap>();
         audioSource = GetComponent<AudioSource>();
-
-        health = maxHealth;
+        health = GetComponent<Health>();
 
         SetWeapon(defaultWeapon);
     }
@@ -98,10 +95,7 @@ public class Mover : MonoBehaviour {
         if (col.gameObject.tag == "Food") {
             col.gameObject.SetActive(false);
             audioSource.PlayOneShot(eatingSound);
-            health += 10;
-            if (health > maxHealth) {
-                health = maxHealth;
-            }
+            health.Add();
             if (!handicap.teeth) {
                 timeOut = 3.0f;
             }
