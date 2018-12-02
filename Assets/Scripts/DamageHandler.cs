@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class DamageHandler : MonoBehaviour
 {
@@ -46,6 +47,11 @@ public class DamageHandler : MonoBehaviour
         Hearts -= damage;
         if (Hearts <= 0)
         {
+            if (CompareTag("Player"))
+            {
+                SceneManager.LoadScene("GameOver");
+                return;
+            }
             gameObject.SetActive(false);
         }
 
