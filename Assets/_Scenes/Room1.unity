@@ -1129,6 +1129,21 @@ Prefab:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 58518851296133842, guid: 86e8b38c46839450690fae8377ded8be,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.19236135
+      objectReference: {fileID: 0}
+    - target: {fileID: 58518851296133842, guid: 86e8b38c46839450690fae8377ded8be,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1.1192932
+      objectReference: {fileID: 0}
+    - target: {fileID: 58518851296133842, guid: 86e8b38c46839450690fae8377ded8be,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.038469315
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86e8b38c46839450690fae8377ded8be, type: 2}
   m_IsPrefabAsset: 0
