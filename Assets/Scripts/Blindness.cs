@@ -16,7 +16,7 @@ public class Blindness : MonoBehaviour {
         if (handicap.eyes == 1) {
             blindness.enabled = true;
             bool facingLeft = GetComponent<Rigidbody2D>().velocity.x < 0.0f;
-            blindness.rectTransform.position = transform.position + (facingLeft ? -1.0f : 1.0f) * new Vector3(blindnessOfffset, 0.0f, 0.0f);
+            blindness.rectTransform.position = transform.position + (facingLeft ? 1.0f : -1.0f) * new Vector3(blindnessOfffset, 0.0f, 0.0f);
         }
     }
 }

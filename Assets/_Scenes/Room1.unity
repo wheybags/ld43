@@ -384,8 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5dd9018751b456eae7117cdf2622c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blindness: {fileID: 0}
-  blindnessOfffset: 12
+  blindness: {fileID: 1377279126}
+  blindnessOfffset: 12.75
 --- !u!82 &185403402
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2439,7 +2439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1230976476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2588,7 +2588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1377279125
 RectTransform:
   m_ObjectHideFlags: 0
