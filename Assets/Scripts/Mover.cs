@@ -51,12 +51,22 @@ public class Mover : MonoBehaviour {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        float actualSpeed = handicap.legs ? speed : speed / 12.0f;
+        float actualSpeed = speed;
+
+        if (handicap.legs == 1) {
+            var vec = Quaternion.Euler(0.0f, 0.0f, Random.Range(-45, 45)) * new Vector2(horizontal, vertical);
+            Debug.Log(vec);
+            horizontal = vec.x;
+            vertical = vec.y;
+        }
+        if (handicap.legs == 0) {
+            actualSpeed = speed / 12.0f;
+        }
 
         if (timeOut == 0.0f) {
             rigidbody.velocity = new Vector2(
-                Mathf.Lerp(0, Input.GetAxis("Horizontal") * actualSpeed, 0.8f),
-                Mathf.Lerp(0, Input.GetAxis("Vertical") * actualSpeed, 0.8f)
+                Mathf.Lerp(0, horizontal * actualSpeed, 0.8f),
+                Mathf.Lerp(0, vertical * actualSpeed, 0.8f)
             );
         }
 
