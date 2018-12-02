@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mover : MonoBehaviour {
     public float speed = 4.0f;
 
-    public GameObject weapon = null;
+    public GameObject weapon;
     public GameObject defaultWeapon;
 
     private new Rigidbody2D rigidbody;
@@ -13,9 +13,9 @@ public class Mover : MonoBehaviour {
     private AudioSource audioSource;
     private Health health;
 
-    private float timeOut = 0.0f;
+    private float timeOut;
 
-    private float wiggleAngle = 0;
+    private float wiggleAngle;
     private float wiggleSign = -1;
 
     public AudioClip eatingSound;
@@ -69,7 +69,10 @@ public class Mover : MonoBehaviour {
                 Mathf.Lerp(0, vertical * actualSpeed, 0.8f)
             );
         }
+    }
 
+    void Update()
+    {
         weapon.GetComponent<MeleeWeapon>().wiggling = Input.GetAxisRaw("Fire1") != 0;
 
         if (weapon.GetComponent<MeleeWeapon>().wiggling && !audioSource.isPlaying) {
@@ -103,7 +106,7 @@ public class Mover : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-        if (col.gameObject.tag == "Food") {
+        if (col.gameObject.CompareTag("Food")) {
             col.gameObject.SetActive(false);
             audioSource.PlayOneShot(eatingSound);
             health.Add();

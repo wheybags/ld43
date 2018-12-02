@@ -15,7 +15,7 @@ public class DamageHandler : MonoBehaviour
         spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (hurtingTicks > 0)
         {
