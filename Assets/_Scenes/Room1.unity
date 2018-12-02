@@ -1427,7 +1427,7 @@ MonoBehaviour:
       I have to take my fee.
     increaseMaximumHealth: 1
     removeLegs: 0
-    removeEyes: 0
+    removeEyes: 1
   - text: What a delightful eye you've given me! It will make a fine addition to my
       collection.
     increaseMaximumHealth: 0
