@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4554034850745966}
   - component: {fileID: 114449720624546652}
   m_Layer: 0
-  m_Name: Right
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 61291250184236962}
   - component: {fileID: 114258643007254020}
   m_Layer: 0
-  m_Name: Right
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -354,7 +354,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1291337854831662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8, y: 0, z: 0}
+  m_LocalPosition: {x: -2.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4155193324974710}
@@ -380,7 +380,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1755521839734998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.935347, y: -0.16284549, z: 0}
+  m_LocalPosition: {x: 20, y: 0, z: 0}
   m_LocalScale: {x: 1.6909, y: 1.6909, z: 1.6909}
   m_Children:
   - {fileID: 4494915708217122}
@@ -664,9 +664,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742c0a85e75e4d54b838cbc81c4ddc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitioningGameObject: {fileID: 0}
   NewSceneName: Room2
+  Type: 0
   TransitionDestinationTag: 0
+  Destination: {fileID: 0}
 --- !u!114 &114449720624546652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -678,8 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64124d5114c47d5ade47dc77eeee65d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestinationTag: 1
-  TransitioningGameObject: {fileID: 0}
+  DestinationTag: 0
 --- !u!212 &212997191085598490
 SpriteRenderer:
   m_ObjectHideFlags: 1
