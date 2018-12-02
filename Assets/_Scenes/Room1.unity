@@ -887,6 +887,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &471642768 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4744553398125314, guid: 969c396e2cc8e41b3b9497d149edb5e8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1890240688}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,6 +1680,11 @@ Prefab:
       propertyPath: Destination
       value: 
       objectReference: {fileID: 1562247424}
+    - target: {fileID: 114548999224534238, guid: 969c396e2cc8e41b3b9497d149edb5e8,
+        type: 2}
+      propertyPath: CameraDestination
+      value: 
+      objectReference: {fileID: 2034814789}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 969c396e2cc8e41b3b9497d149edb5e8, type: 2}
   m_IsPrefabAsset: 0
@@ -1747,6 +1757,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2024448129}
   m_CullTransparentMesh: 0
+--- !u!4 &2034814789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4744553398125314, guid: 639227c1fd7af46cb876c1315c443c29,
+    type: 2}
+  m_PrefabInternal: {fileID: 2127049214}
 --- !u!1001 &2127049214
 Prefab:
   m_ObjectHideFlags: 0
@@ -1791,6 +1806,11 @@ Prefab:
       propertyPath: Destination
       value: 
       objectReference: {fileID: 1293826007}
+    - target: {fileID: 114709556866378768, guid: 639227c1fd7af46cb876c1315c443c29,
+        type: 2}
+      propertyPath: CameraDestination
+      value: 
+      objectReference: {fileID: 471642768}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 639227c1fd7af46cb876c1315c443c29, type: 2}
   m_IsPrefabAsset: 0
