@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
-    public int current = 3;
     public int maximum = 3;
 
     public Image[] images;
@@ -14,13 +13,13 @@ public class Health : MonoBehaviour {
 	void Update () {
         for (int i = 0; i < images.Length; i++) {
             images[i].enabled = i < maximum;
-            images[i].sprite = i < current ? fullHeart : emptyHeart;
+            images[i].sprite = i < GetComponent<DamageHandler>().Hearts ? fullHeart : emptyHeart;
         }
     }
 
     public void Add() {
-        if (current < maximum) {
-            current += 1;
+        if (GetComponent<DamageHandler>().Hearts < maximum) {
+            GetComponent<DamageHandler>().Hearts += 1;
         }
     }
 }

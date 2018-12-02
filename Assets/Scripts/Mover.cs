@@ -86,6 +86,7 @@ public class Mover : MonoBehaviour {
             wiggleAngle = 0;
         }
 
+        weapon.transform.position = transform.position;
         weapon.transform.rotation = Quaternion.Euler(0, 0, angle);
 
         Debug.DrawLine(position, position + direction * 2, Color.red, 0, false);

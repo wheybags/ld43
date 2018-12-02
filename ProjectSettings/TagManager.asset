@@ -7,6 +7,7 @@ TagManager:
   - Food
   - Monster
   - Key
+  - Weapon
   layers:
   - Default
   - TransparentFX

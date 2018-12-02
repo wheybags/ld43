@@ -21,10 +21,10 @@ public class MeleeWeapon : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (wiggling && collision.gameObject.tag == "Monster")
-        {
-            GetComponent<AudioSource>().PlayOneShot(hitEffect);
-            collision.gameObject.GetComponent<Monster>().TakeDamage(Damage);
-        }
+        //if (wiggling && collision.gameObject.tag == "Monster")
+        //{
+        //    GetComponent<AudioSource>().PlayOneShot(hitEffect);
+        //    collision.gameObject.GetComponent<Monster>().TakeDamage(Damage);
+        //}
     }
 }

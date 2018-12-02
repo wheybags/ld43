@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 185403402}
   - component: {fileID: 185403403}
   - component: {fileID: 185403404}
+  - component: {fileID: 185403406}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -415,7 +416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03485b6d750ea4a24b355ace5a9cdd3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: 3
   maximum: 3
   images:
   - {fileID: 92347672}
@@ -532,6 +532,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeyIds: 
+--- !u!114 &185403406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185403395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25228b2a1f85bec4c8c1eb282060950a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hearts: 3
+  damagedByTag: Monster
+  hurtingTicks: 0
 --- !u!1 &224141133
 GameObject:
   m_ObjectHideFlags: 0
