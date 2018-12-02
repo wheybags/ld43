@@ -1071,6 +1071,26 @@ Prefab:
       propertyPath: m_Name
       value: room 2D
       objectReference: {fileID: 0}
+    - target: {fileID: 61310758943267200, guid: 1253aa01cdff44939bda998b6b5bbd3d,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 2.9910033
+      objectReference: {fileID: 0}
+    - target: {fileID: 61310758943267200, guid: 1253aa01cdff44939bda998b6b5bbd3d,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 3.4168725
+      objectReference: {fileID: 0}
+    - target: {fileID: 61530510738536990, guid: 1253aa01cdff44939bda998b6b5bbd3d,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0033135414
+      objectReference: {fileID: 0}
+    - target: {fileID: 61530510738536990, guid: 1253aa01cdff44939bda998b6b5bbd3d,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 3.4548478
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1253aa01cdff44939bda998b6b5bbd3d, type: 2}
   m_IsPrefabAsset: 0
@@ -2324,6 +2344,16 @@ Prefab:
     - target: {fileID: 1442949109124200, guid: cde1d30daeab34c72a8d309a809007bf, type: 2}
       propertyPath: m_Name
       value: room 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61717569442455924, guid: cde1d30daeab34c72a8d309a809007bf,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.014446795
+      objectReference: {fileID: 0}
+    - target: {fileID: 61717569442455924, guid: cde1d30daeab34c72a8d309a809007bf,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 3.4771152
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cde1d30daeab34c72a8d309a809007bf, type: 2}
