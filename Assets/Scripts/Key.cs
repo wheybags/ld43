@@ -17,7 +17,6 @@ public class Key : MonoBehaviour {
 	
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("test");
         if (collision.gameObject.tag == "Player") {
             collision.gameObject.GetComponent<PlayerInventory>().KeyIds.Add(KeyID);
             this.gameObject.SetActive(false);
