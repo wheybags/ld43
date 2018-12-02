@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Food
   - Monster
+  - Key
   layers:
   - Default
   - TransparentFX
