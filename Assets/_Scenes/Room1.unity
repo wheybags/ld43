@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315f33400852948d1a79221d09a8395d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eyes: 2
   leftEye: 1
   rightEye: 1
   legs: 2
@@ -383,8 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5dd9018751b456eae7117cdf2622c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blindnessL: {fileID: 1230976477}
-  blindnessR: {fileID: 1377279126}
+  blindness: {fileID: 0}
+  blindnessOfffset: 12
 --- !u!82 &185403402
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1517,14 +1518,17 @@ MonoBehaviour:
   - text: Hey, how about another heart? It's cheap, I promise!
     increaseMaximumHealth: 0
     removeLegs: 0
+    removeEyes: 0
   - text: Hahaha! I knew you were a sensible businessman. Therefore you surely understand
       I have to take my fee.
     increaseMaximumHealth: 1
     removeLegs: 0
+    removeEyes: 0
   - text: What a delightful eye you've given me! It will make a fine addition to my
       collection.
     increaseMaximumHealth: 0
     removeLegs: 0
+    removeEyes: 0
 --- !u!61 &587657398
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2326,12 +2330,15 @@ MonoBehaviour:
       greatly enhance your abilities, but I need a small favour in return...
     increaseMaximumHealth: 0
     removeLegs: 0
+    removeEyes: 0
   - text: Okay then! I'll grant you one extra heart. Now, for my reward...
     increaseMaximumHealth: 1
     removeLegs: 0
+    removeEyes: 0
   - text: HAHAHA! I took your fucking LEG
     increaseMaximumHealth: 0
     removeLegs: 1
+    removeEyes: 0
 --- !u!61 &1178495955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2432,7 +2439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1230976476
 RectTransform:
   m_ObjectHideFlags: 0
