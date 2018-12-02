@@ -10,6 +10,7 @@ public class TalkingItem
     public string text;
     public int increaseMaximumHealth;
     public int removeLegs;
+    public int removeEyes;
 }
 
 public class Talking : MonoBehaviour {
@@ -30,8 +31,6 @@ public class Talking : MonoBehaviour {
         canvas.enabled = false;
         text = canvas.transform.Find("Text").gameObject.GetComponent<Text>();
         button = canvas.transform.Find("Button").gameObject.GetComponent<Button>();
-
-        button.onClick.AddListener(() => UpdateDialog(true));
     }
 
     private void UpdateDialog(bool advance) {
@@ -41,6 +40,7 @@ public class Talking : MonoBehaviour {
             text.text = item.text;
             playerHealth.maximum += item.increaseMaximumHealth;
             playerHandicap.legs -= item.removeLegs;
+            playerHandicap.eyes -= item.removeEyes;
         }
         else
         {
@@ -52,6 +52,8 @@ public class Talking : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.CompareTag("Player")) {
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(() => UpdateDialog(true));
             playerHandicap = collision.collider.GetComponent<Handicap>();
             playerHealth = collision.collider.GetComponent<Health>();
             canvas.enabled = true;
