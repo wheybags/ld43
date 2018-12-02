@@ -36,8 +36,16 @@ public class Monster : MonoBehaviour {
             spriteRenderer.color = Color.white;
         }
 
-        Vector2 targetPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        var player = GameObject.FindGameObjectWithTag("Player");
+
+        Vector2 targetPosition = player.GetComponent<BoxCollider2D>().bounds.center;
+
+
         Vector2 myPosition = transform.position;
+
+        Debug.DrawLine(myPosition, targetPosition, Color.green);
+
+
         GetComponent<Rigidbody2D>().velocity = (targetPosition - myPosition).normalized * 1.0f;
     }
 
