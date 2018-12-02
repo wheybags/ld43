@@ -1079,6 +1079,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4785289762620504, guid: cde1d30daeab34c72a8d309a809007bf,
     type: 2}
   m_PrefabInternal: {fileID: 1890240688}
+--- !u!1001 &514510166
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4155372712131168, guid: 86e8b38c46839450690fae8377ded8be, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 23.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155372712131168, guid: 86e8b38c46839450690fae8377ded8be, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155372712131168, guid: 86e8b38c46839450690fae8377ded8be, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155372712131168, guid: 86e8b38c46839450690fae8377ded8be, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155372712131168, guid: 86e8b38c46839450690fae8377ded8be, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155372712131168, guid: 86e8b38c46839450690fae8377ded8be, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155372712131168, guid: 86e8b38c46839450690fae8377ded8be, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155372712131168, guid: 86e8b38c46839450690fae8377ded8be, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 86e8b38c46839450690fae8377ded8be, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,7 +2408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 700.6, y: -50.04001}
+  m_AnchoredPosition: {x: 700.6, y: -50.04004}
   m_SizeDelta: {x: 522.69, y: 796.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088627066
