@@ -36,8 +36,9 @@ public class Monster : MonoBehaviour {
             spriteRenderer.color = Color.white;
         }
 
-        var targetPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-        GetComponent<Rigidbody2D>().velocity = (targetPosition - transform.position).normalized * 20.0f;
+        Vector2 targetPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Vector2 myPosition = transform.position;
+        GetComponent<Rigidbody2D>().velocity = (targetPosition - myPosition).normalized * 1.0f;
     }
 
     public void TakeDamage(int damage)
