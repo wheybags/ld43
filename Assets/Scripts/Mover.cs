@@ -55,7 +55,6 @@ public class Mover : MonoBehaviour {
 
         if (handicap.legs == 1) {
             var vec = Quaternion.Euler(0.0f, 0.0f, Random.Range(-45, 45)) * new Vector2(horizontal, vertical);
-            Debug.Log(vec);
             horizontal = vec.x;
             vertical = vec.y;
         }
