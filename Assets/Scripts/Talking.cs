@@ -1,20 +1,32 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[Serializable]
+public class TalkingItem
+{
+    public string text;
+    public int increaseMaximumHealth;
+    public int removeLegs;
+}
+
 public class Talking : MonoBehaviour {
-    public Canvas canvas;
+    public List<TalkingItem> Items;
 
     private Text text;
     private Button button;
 
-    private int dialog = 0;
+    private int dialog;
 
+    private Canvas canvas;
     private Handicap playerHandicap;
     private Health playerHealth;
 
-    private void Start() {
+    private void Start()
+    {
+        canvas = GameObject.Find("DialogCanvas").GetComponent<Canvas>();
         canvas.enabled = false;
         text = canvas.transform.Find("Text").gameObject.GetComponent<Text>();
         button = canvas.transform.Find("Button").gameObject.GetComponent<Button>();
@@ -23,21 +35,16 @@ public class Talking : MonoBehaviour {
     }
 
     private void UpdateDialog(bool advance) {
-        switch (dialog) {
-            case 0:
-                text.text = "Hello, my good man! Would you be interested in a business proposal? I can greatly enhance your abilities, but I need a small favour in return...";
-                break;
-            case 1:
-                text.text = "Okay then! I'll grant you one extra heart. Now, for my reward...";
-                playerHealth.maximum++;
-                break;
-            case 2:
-                text.text = "HAHAHA! I took your fucking LEG";
-                playerHandicap.legs--;
-                break;
-            default:
-                canvas.enabled = false;
-                break;
+        if (dialog >= 0 && dialog < Items.Count)
+        {
+            var item = Items[dialog];
+            text.text = item.text;
+            playerHealth.maximum += item.increaseMaximumHealth;
+            playerHandicap.legs -= item.removeLegs;
+        }
+        else
+        {
+            canvas.enabled = false;
         }
         if (advance)
             dialog++;

@@ -2514,7 +2514,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed8c7f7288894ea0903f0c693e236b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1717269755}
+  Items:
+  - text: Hello, my good man! Would you be interested in a business proposal? I can
+      greatly enhance your abilities, but I need a small favour in return...
+    increaseMaximumHealth: 0
+    removeLegs: 0
+  - text: Okay then! I'll grant you one extra heart. Now, for my reward...
+    increaseMaximumHealth: 1
+    removeLegs: 0
+  - text: HAHAHA! I took your fucking LEG
+    increaseMaximumHealth: 0
+    removeLegs: 1
 --- !u!61 &1178495955
 BoxCollider2D:
   m_ObjectHideFlags: 0
