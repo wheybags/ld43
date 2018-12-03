@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Martin Hanz\xEDk\nDavid Labsk\xFD\nTom Mason\nJi\u0159\xED \u0160ebele"
+  m_Text: "Martin Hanz\xEDk\nSanqui\nTom Mason\nJi\u0159\xED \u0160ebele"
 --- !u!222 &164583648
 CanvasRenderer:
   m_ObjectHideFlags: 0
